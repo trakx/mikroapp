@@ -20,7 +20,7 @@ const sidebarListStyles = theme => ({
     padding: '18px 20px',
     borderRadius: '4px',
     width: 'calc(100% - 28px)',
-    background: '#FFFFFF',
+    //background: '#FFFFFF',
     boxShadow: '0px 0px 2px rgba(0, 0, 0, 0.12)',
     opacity: 0.6
   },
@@ -46,7 +46,7 @@ const sidebarListStyles = theme => ({
     fontWeight: 600
   },
   selectedListItem: {
-    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
+    // boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
     opacity: 1
   },
   selectedText: {

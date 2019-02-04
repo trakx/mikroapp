@@ -1,0 +1,4 @@
+.logoButton {
+    filter: brightness(0) invert(1);
+    max-height: 5em;
+}

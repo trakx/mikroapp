@@ -31,7 +31,7 @@ const styles = theme => ({
     width: 'calc(100% - 20px)',
     fontSize: '14pt',
     paddingTop: 20,
-    color: '#666666'
+    //color: '#666666'
   },
   btn: {
     width: 'calc(100% - 20px)',
@@ -62,7 +62,7 @@ const DepositView = ({ classes, wallet: { name, address, balance, locked } }) =>
           Locked: {toMinFixed(locked, 2)}
         </Typography>
         <Typography
-          variant="paragraph"
+          variant="caption"
           paragraph={true}
           classes={{paragraph: classes.description}}
           gutterBottom

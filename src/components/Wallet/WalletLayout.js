@@ -37,11 +37,11 @@ const styles = theme => ({
     minHeight: 60
   },
   mobileTabs: {
-    background: '#FAFAFA'
+    // background: '#FAFAFA'
   },
   content: {
     flexGrow: 1,
-    background: 'white'
+    // background: 'white'
     // padding: theme.spacing.unit * 3,
   }
 });

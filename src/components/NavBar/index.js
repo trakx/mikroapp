@@ -13,7 +13,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import TrakxIcon from '../TrakxIcon';
 import BackIcon from '@material-ui/icons/ArrowBack';
 import PersonIcon from '@material-ui/icons/Person';
 import Hidden from '@material-ui/core/Hidden';
@@ -50,7 +50,7 @@ class NavBar extends Component {
   }
 
   render() {
-    const {classes, location, wallets, activeWallet } = this.props;
+    const { classes, location, wallets, activeWallet } = this.props;
     const { anchorEl, menuAnchorEl } = this.state;
 
     const menuButton = (
@@ -61,7 +61,7 @@ class NavBar extends Component {
         aria-haspopup="true"
         onClick={this.handleMenuClick}
       >
-        <MenuIcon />
+        <TrakxIcon />
       </IconButton>
     );
 
@@ -117,8 +117,8 @@ class NavBar extends Component {
             open={Boolean(menuAnchorEl)}
             onClose={this.handleClose}
           >
-            <Link to="/trade"><MenuItem>TRADE</MenuItem></Link>
-            <Link to="/wallets"><MenuItem>WALLETS</MenuItem></Link>
+            <Link to="/trade"><MenuItem>Trade</MenuItem></Link>
+            <Link to="/wallets"><MenuItem>Wallets</MenuItem></Link>
           </Menu>
           <Menu
             id="simple-menu"

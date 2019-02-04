@@ -12,7 +12,7 @@ const sidebarStyles = theme => ({
   },
   drawerPaper: {
     minWidth: 400,
-    background: '#F5F5F5'
+    //background: '#F5F5F5'
   },
   toolbar: theme.mixins.toolbar
 });

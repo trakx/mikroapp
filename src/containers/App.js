@@ -5,21 +5,25 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import WalletPage from './WalletPage';
 import TradePage from './TradePage';
 import LoginPage from './LoginPage';
+import AboutPage from './AboutPage';
 import actions from "../actions";
 import PrivateRoute from '../components/PrivateRoute';
+import '../assets/fonts.css'
 
 const muiTheme = createMuiTheme({
   palette: {
-    primary: {
-      main: '#F44336'
+    primary: { 
+      main:'#123FAC',
+      light:'#0194D3',
+      dark: '#0A46D7'
     },
-    secondary: {
-      main: '#fff'
-    },
-    action: {
-      selected: '#ffffff'
+    secondary :{
+      main: '#1F2738'
     }
   },
+  typography:{
+    fontFamily: '"GorditaBold", "GorditaMedium", "Karla"'
+  }
 });
 
 
@@ -38,7 +42,8 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={muiTheme}>
         <Switch>
-          <Redirect exact from='/' to='/wallets' />
+          <Redirect exact from='/' to='/about' />
+          <Route exact path="/about" component={AboutPage}/>
           <Route exact path="/login" component={LoginPage}/>
           <PrivateRoute path="/wallets" component={WalletPage} isAuthenticated={isAuthenticated} isLoading={isFetching}/>
           <PrivateRoute path="/trade" component={TradePage} isAuthenticated={isAuthenticated} isLoading={isFetching}/>
@@ -47,7 +52,6 @@ class App extends Component {
     );
   }
 }
-
 
 export default connect(state => ({
   user: state.user.data,

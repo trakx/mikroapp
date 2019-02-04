@@ -8,20 +8,24 @@ const styles = theme => ({
   root: {
     display: 'flex',
   },
-  toolbar: theme.mixins.toolbar
+  rootCentered: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  toolbar: theme.mixins.toolbar,
 });
 
 class Layout extends Component {
   render() {
-    const { classes, children } = this.props;
+    const { classes, children, centered } = this.props;
 
     return (
       <Fragment>
-        <NavBar/>
+        <NavBar />
         <div className={classes.toolbar} />
-        <div className={classes.root}>
+        <div className={centered ? classes.rootCentered : classes.root}>
           <CssBaseline />
-          { children }
+          {children}
         </div>
       </Fragment>
     );

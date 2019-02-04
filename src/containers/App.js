@@ -6,9 +6,9 @@ import WalletPage from './WalletPage';
 import TradePage from './TradePage';
 import LoginPage from './LoginPage';
 import AboutPage from './AboutPage';
-import actions from "../actions";
+import actions from '../actions';
 import PrivateRoute from '../components/PrivateRoute';
-import '../assets/fonts.css'
+import '../assets/fonts.css';
 
 const muiTheme = createMuiTheme({
   palette: {
